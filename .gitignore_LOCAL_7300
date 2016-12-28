@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .idea
 node_modules
 jspm_packages
@@ -15,4 +14,3 @@ _temp
 !protractor*.js
 !systemjs.config.js
 !wallaby.js
-

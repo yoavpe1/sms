@@ -15,4 +15,7 @@ _temp
 !protractor*.js
 !systemjs.config.js
 !wallaby.js
-
+=======
+dir_to_ignore/node_modules/*
+/node_modules/*
+>>>>>>> 23438213713360c1f6a34543988de66b36f9985d
