@@ -1,0 +1,41 @@
+<div class="container">
+   
+    <h1>SMS blessings</h1>
+    <form #smsForm="ngForm" (ngSubmit)="onSubmit(newbleesingsOrder)">
+      <div class="form-group">
+        <label for="senderName">sender Name</label>
+        <input #senderName type="text" class="form-control" id="senderName" name="senderName" [(ngModel)]="newbleesingsOrder.senderName" required>
+      </div>
+      <div class="form-group">
+        <label for="senderCell">Sender Cell Phone</label>
+        <input #senderPhone type="text" class="form-control" id="senderCell" name="senderCell" [(ngModel)]="newbleesingsOrder.senderCell">
+      </div>
+      <div class="form-group">
+        <label for="senderEmail">Sender Email Address</label>
+        <input #senderEmail type="text" class="form-control" id="senderEmail" name="senderEmail" [(ngModel)]="newbleesingsOrder.senderMail">
+      </div>
+      <div class="form-group">
+        <label for="blessingsDate">Blessings Date</label>
+        <input #blessingsDate type="Date" class="form-control" id="blessingsDate" min={{today3}} name="blessingsDate" [(ngModel)]="newbleesingsOrder.blesingsDate">
+      </div>
+      <!--<div class="form-group" *ngFor="let bl of blessingsBank; let i = index" >
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="senderEmail">Blessing Text</label>
+            <textarea class="form-control" id=id{{i}} rows="3" [value]="i" [(ngModel)]="formText[i]" name=bless{{i}}></textarea>
+          </div>
+          <div class="col-sm-2">
+            <label for="timePicker">Select Time</label>
+           <input type="text" class="time ui-timepicker-input" [(ngModel)]="smsTime[i]" name=time{{i}}>
+          </div>
+         <div class="col-sm-6">
+          <label for="blessings">Blessings Bank</label>
+            <select class="form-control" [id]="bl.name" required (change)="onChange($event.target.value, i)">
+              <option *ngFor="let b of blessingsBank" [value]="b.text">{{b.text}}</option>
+            </select>
+         </div>
+        </div>
+      </div>-->
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
